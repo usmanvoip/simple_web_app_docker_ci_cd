@@ -18,7 +18,7 @@
 
 ### Configure ssh keys
 
-> **_NOTE:_** Test connections from shell cmd before testing pipeline 
+> **_NOTE:_** Test connections from shell before testing pipeline 
 1. production
 2. staging
 3. qa
