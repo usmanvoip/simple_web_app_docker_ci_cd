@@ -1,5 +1,4 @@
 node {
-	//with QA
 	properties([disableConcurrentBuilds()])
 	app = null
 	stage('Checkout Repository') {
