@@ -4,12 +4,12 @@
 
 ## How it works
 
-### Add some Credentials
+### Add some Credentials on Jenkins
 
 1. DockerHub
 2. Build Sources 
 
-### Set Some Envoirnment Variables for Jenkins
+### Set Some Envoirnment Variables on Jenkins
 
 1. simpleweb_prod (production server IP)
 2. simpleweb_stag (staging server IP)
