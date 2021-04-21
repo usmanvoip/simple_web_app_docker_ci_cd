@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get("/", (req, resp) => {
-    resp.send("Hello DevOps! App is successfully deployed on QA, staging and producion through CI/CD");
+    resp.send("Hello DevOps! App is successfully deployed on QA, staging and producion through CI/CD change in only QA !");
 });
 
 

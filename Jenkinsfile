@@ -7,7 +7,6 @@ node {
 		env.COMMIT_ID = readFile('.git/commit-id').trim()
 		env.PROJECT_NAME = (env.JOB_NAME.tokenize('/') as String[])[0]
 		env.IMAGE_TAG = "usmanbaloch/${env.PROJECT_NAME}:${commit_id}"
-		env.BUILD_TAG = "${env.PROJECT_NAME}-${commit_id}"
 		env.LOCAL_IMAGE_PATH = "/usr/local/src/qa_images/"
 		env.LOCAL_IMAGE = "${env.LOCAL_IMAGE_PATH}${env.PROJECT_NAME}_${commit_id}.tar.gz"
 	}
@@ -67,7 +66,7 @@ node {
 			} catch (err) {
 				echo: 'caught error: $err'
 			}
-			sh "ssh root@$simpleweb_qa \"docker run --restart always --name simpleweb -p 80:3000 -d ${env.PROJECT_NAME}:${commit_id}\""	
+			sh "ssh root@$simpleweb_qa \"docker run --restart always --name simpleweb -p 80:3000 -d ${env.IMAGE_TAG}\""	
 		}
 	}
 	stage('Clear Old Images for Jenkins and QA'){
